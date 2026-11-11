@@ -1,10 +1,14 @@
-# Production Standards: Script → Image + Audio
+# Production Standards: Script → ChatGPT Images + Audio
 
-The same detailed canonical script is the source of both image and audio generation. Never paraphrase dialogue downstream. Target runtime 42:00 (acceptable 40:00–45:00). Use HH:MM:SS.mmm timecodes. Every shot gets S##E##-SH###, in/out, duration, scene/location/cast IDs, action, composition, camera, lighting, emotion, continuity locks and linked audio IDs. Default shot duration 4 seconds; normal range 3–5 seconds. A 42-minute episode at four seconds averages about 630 shots.
+Each episode uses a canonical timed visual production draft as its common source for images and audio. Target runtime is 42:40 (acceptable 40:00–45:00): 8 sequences × 5:20, 64 beats × 40 seconds and 640 planned shots × 4 seconds.
 
-Each audio event gets S##E##-AU### and type DIALOGUE, NARRATION, SFX, AMBIENCE or MUSIC. Include start/end, exact spoken text/description, speaker/asset ID, performance, pace, breaths/pauses, linked shot IDs and mix notes. Maintain a voice bible per character. After generation, measure actual audio durations and conform the edit; timecodes are targets, not substitutes for checking generated speech.
+## ChatGPT collage target: 80 panels per single image
+For each sequence, generate **one separate single image containing exactly 80 story panels** in a strict 10-column × 8-row grid. Panels are equal-sized, numbered 001–080 in reading order and separated by clean visible borders/gutters. Each panel contains only its story image and one small sequence number. The number is the only permitted text. No captions, dialogue, subtitles, titles, descriptions, labels, logos, watermarks, UI, pseudo-text, decorative filler or unrelated content. One collage per generation request; never combine batches.
 
-## Image collage hard limit
-Never generate more than 80 image panels in a single collage. Split larger shot lists into batches. Use equal-sized panels in a clean grid, separated by a neat visible border/gutter. Each panel contains only its story image and a small sequence number as reference. No captions, dialogue, subtitles, titles, descriptions, labels, logos, watermarks, UI, decorative filler, unrelated text or extra content outside story imagery except borders. Numbering is local to batch; manifest maps it to global shot IDs. Inspect every panel for identity drift, anatomy errors, unwanted text and continuity. Reduce batch size if quality suffers.
+Attach approved character, ship and location reference images. The shot-list CSV is the panel-level prompt source. Reject missing, duplicated, merged, illegible or continuity-breaking panels. Image generation may fail to honour an 80-cell grid; if so, split the batch into smaller grids and retain the global shot IDs. Never report a malformed contact sheet as a valid 80-panel collage.
 
-YouTube: original scripts/assets or documented rights; avoid repetitive mass-produced episodes; review current policies. Apply realistic altered/synthetic disclosure when required. Animation alone does not determine made-for-kids status. No guarantee of monetization.
+## Audio
+Audio IDs use S##E##-AU###. Cue sheets contain timed dialogue, ambience and sequence-specific SFX. Dialogue must match the screenplay exactly. Voice identities should match approved voice references. Measure generated audio duration and conform the edit; timecodes are targets, not proof of final runtime. Expand the current timed visual drafts into dialogue-dense actor-ready scripts before treating them as final recording scripts.
+
+## Continuity and rights
+Stable character, ship, location, prop and technology IDs are permanent. Approved refs override improvised descriptions. Track wardrobe, injuries, props, damage, weather, lighting, geography, gravity, screen direction, knowledge and relationships. Use original scripts/assets or documented permissions. Check current YouTube monetisation, altered/synthetic content and made-for-kids requirements before release.
