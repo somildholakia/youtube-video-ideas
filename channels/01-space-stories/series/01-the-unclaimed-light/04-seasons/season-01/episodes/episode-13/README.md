@@ -1,5 +1,13 @@
 # S01E13 — Where the Trail Ends
 
-Status: Concept only. Reserved for complete timed screenplay, shot-list.csv, image-prompts.md, audio-cues.csv, continuity.md and production-status.md. Do not treat the season guide as a finished script.
+**Theme:** A safe return is a choice, not a guarantee.
 
-Production target: 40–45 minutes. Shot target: 3–5 seconds, default 4 seconds. Canonical script drives both image and audio generation. Each image collage is limited to 80 panels maximum, with equal panels, neat borders and a small sequence number only; no other text or unrelated content.
+## Production files
+- [Timed screenplay](script.md)
+- [640-shot image manifest](shot-list.csv)
+- [Timed audio cue sheet](audio-cues.csv)
+
+## ChatGPT image generation
+Generate eight separate collage images for this episode. Each collage is one single image with exactly 80 equal-sized panels in a 10-column × 8-row grid, with visible borders and panel numbers 001–080. The number is the only text permitted. No captions, dialogue, subtitles, labels, logos, watermarks, UI or decorative filler. Attach approved character, ship and location references. Inspect every panel; split a batch into smaller grids if 80 panels are not cleanly legible, retaining global shot IDs.
+
+**Target edit:** 42:40; verify actual generated audio and final export within 40–45 minutes.
