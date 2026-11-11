@@ -1,25 +1,32 @@
 # Season 1 Production Pack — The First Coordinate
 
-This index is the entry point for the Season 1 production files.
+Entry point for the Season 1 episode production files.
 
-## Global production contract
-- Episode assembly target: 42:40, within the intended 40–45 minute range.
-- Each episode uses 8 sequences × 5:20, 64 timed beats × 40 seconds and 640 planned shots × 4 seconds.
-- Each episode has 8 separate ChatGPT collage outputs. Each collage is exactly one image containing 80 panels in a 10-column × 8-row grid. The sequence panel numbers are 001–080, with a visible border between every panel.
-- Panel content: story image plus one small sequence number only. No captions, dialogue, titles, labels, logos, watermarks, UI or unrelated text.
-- All dialogue in screenplay files is canonical; copy it verbatim into audio generation. Do not ask the image model to render text.
-- Character and location IDs remain stable. Always attach approved character, ship and location reference images in ChatGPT image generation prompts.
-- A collage is a contact sheet. Extract or regenerate individual frames after reviewing it; do not assume all 80 panels are individually production-perfect.
+## Production structure
+- 14 episodes.
+- 8 sequences per episode, each 5:20.
+- 8 beats per sequence, each 40 seconds.
+- 10 shots per beat at four seconds each.
+- 640 planned shots and a 42:40 assembly target per episode.
 
-## Episode pack layout
+## Episode folder contents
 Each episode folder contains:
-- `script.md` — timed episode screenplay and continuity notes.
-- `shot-list.csv` — 640 shot IDs, timecodes and panel-specific image prompts.
-- `audio-cues.csv` — timed dialogue, ambience, SFX and score cues linked to shots.
-- `collage-prompts.md` — eight separate 80-panel ChatGPT prompts with panel mapping.
+- `script.md` — timed visual production draft, sequence beats, key dialogue and continuity rules.
+- `shot-list.csv` — 640 stable shot IDs, in/out timecodes and per-panel image prompts.
+- `audio-cues.csv` — 64 ambience cues, 16 dialogue cues and 8 sequence SFX cues, linked to the shot timeline.
 
-## Quality gate
-A generated image model cannot guarantee 80 perfectly legible panels from one prompt. If a single 80-panel image is illegible, split that batch into smaller collages and preserve the same global shot IDs. Never claim a malformed contact sheet contains 80 usable images. Final episode runtime must be checked against rendered audio and edit timings, not estimated from the prompt.
+## ChatGPT collage rule
+Generate each sequence as **one separate image** containing **exactly 80 panels** in a 10-column × 8-row grid. All panels equal-sized, in reading order and separated by visible borders. Each panel shows only the story image plus one small sequence number; the sequence number is the only text allowed. No captions, dialogue, subtitles, titles, labels, logos, watermarks, UI, pseudo-writing, decorative filler or unrelated content. One collage per generation request.
+
+The CSV's panel numbers 001–080 map to global shot IDs. Attach approved character, ship and location references. Reject a sheet if any panel is missing, merged, duplicated, illegible or inconsistent. Image models may fail at this density; if so, split the sequence into smaller grids without changing the global shot IDs. Do not claim a failed collage contains 80 usable panels.
+
+## Generation order
+1. Generate and approve character references and the Wayfarer model reference.
+2. Generate location references.
+3. Generate one collage at a time in ChatGPT using the relevant script sequence and shot CSV.
+4. Inspect the exact panel count, sequence order, borders, unwanted text and continuity.
+5. Generate audio from exact dialogue and cue-sheet descriptions.
+6. Assemble and conform the timeline to measured audio; verify 40–45 minutes.
 
 ## Status
-Production blueprints and per-shot manifests are being added for all 14 Season 1 episodes. Character reference artwork is still to be generated and approved by the creator in ChatGPT before final production.
+The text production packs are committed. Character artwork, location artwork, generated collages, voice renders, final mixes and finished videos are not yet generated.
