@@ -16,7 +16,7 @@ If you cannot render exactly 80 clearly separated panels, STOP and ask to split 
 - Grid: 10 columns × 8 rows = exactly 80 panels.
 - Visible borders between all panels.
 - Panel numbers: 001–080, reading order.
-- Global shot IDs: S01E07-SH01 through S01E07-SH80.
+- Global shot IDs: S01E07-SH001 through S01E07-SH080.
 - Save as: `S01E07_COL01.png`.
 - Attach the approved references for every listed character, the Wayfarer when present, and the relevant location.
 - Read the matching sequence in `script.md`; use the matching 80 rows in `shot-list.csv` as the authoritative panel prompts. Do not invent new story actions.
@@ -29,7 +29,7 @@ If you cannot render exactly 80 clearly separated panels, STOP and ask to split 
 - Grid: 10 columns × 8 rows = exactly 80 panels.
 - Visible borders between all panels.
 - Panel numbers: 001–080, reading order.
-- Global shot IDs: S01E07-SH81 through S01E07-SH160.
+- Global shot IDs: S01E07-SH081 through S01E07-SH160.
 - Save as: `S01E07_COL02.png`.
 - Attach the approved references for every listed character, the Wayfarer when present, and the relevant location.
 - Read the matching sequence in `script.md`; use the matching 80 rows in `shot-list.csv` as the authoritative panel prompts. Do not invent new story actions.
